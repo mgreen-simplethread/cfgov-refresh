@@ -8,6 +8,8 @@ from unipath import DIRS, Path
 
 from cfgov.util import admin_emails
 
+import wagtail
+
 
 # Repository root is 4 levels above this file
 REPOSITORY_ROOT = Path(__file__).ancestor(4)
@@ -37,24 +39,47 @@ PASSWORD_HASHERS = global_settings.PASSWORD_HASHERS
 
 # Application definition
 
-INSTALLED_APPS = (
-    'permissions_viewer',
-    'wagtail.wagtailcore',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailembeds',
-    'wagtail.contrib.wagtailfrontendcache',
-    # 'wagtail.wagtailsearch',  # TODO: conflicts w/ haystack, need to revisit
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailforms',
-    'wagtail.wagtailsites',
+if wagtail.VERSION >= (2, 0):
+    WAGTAIL_APPS = (
+        'permissions_viewer',
+        'wagtail.core',
+        'wagtail.admin',
+        'wagtail.documents',
+        'wagtail.snippets',
+        'wagtail.users',
+        'wagtail.images',
+        'wagtail.embeds',
+        'wagtail.contrib.frontend_cache',
+        # 'wagtail.wagtailsearch',  # TODO: conflicts w/ haystack, need to revisit
+        'wagtail.sites',
+        'wagtail.contrib.forms',
+        'wagtail.contrib.modeladmin',
+        'wagtail.contrib.redirects',
+        'wagtail.contrib.routable_page',
+        'wagtail.contrib.table_block',
+    )
+else:
+    WAGTAIL_APPS = (
+        'permissions_viewer',
+        'wagtail.wagtailcore',
+        'wagtail.wagtailadmin',
+        'wagtail.wagtaildocs',
+        'wagtail.wagtailsnippets',
+        'wagtail.wagtailusers',
+        'wagtail.wagtailimages',
+        'wagtail.wagtailembeds',
+        'wagtail.contrib.wagtailfrontendcache',
+        # 'wagtail.wagtailsearch',  # TODO: conflicts w/ haystack, need to revisit
+        'wagtail.wagtailredirects',
+        'wagtail.wagtailforms',
+        'wagtail.wagtailsites',
 
-    'wagtail.contrib.modeladmin',
-    'wagtail.contrib.table_block',
-    'wagtail.contrib.wagtailroutablepage',
+        'wagtail.contrib.modeladmin',
+        'wagtail.contrib.table_block',
+        'wagtail.contrib.wagtailroutablepage',
+    )
+
+INSTALLED_APPS = WAGTAIL_APPS + (
 
     'localflavor',
     'modelcluster',

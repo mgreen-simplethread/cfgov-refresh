@@ -1,6 +1,12 @@
-from wagtail.wagtailcore import blocks
+import wagtail
 
 from v1.atomic_elements import organisms
+
+
+if wagtail.VERSION >= (2, 0):
+    from wagtail.core import blocks
+else:
+    from wagtail.wagtailcore import blocks
 
 
 class Tip(blocks.StructBlock):

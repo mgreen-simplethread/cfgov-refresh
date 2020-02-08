@@ -3,7 +3,13 @@ from datetime import timedelta
 from django.core.cache import caches
 from django.utils import timezone
 
-from wagtail.wagtailcore.signals import page_published
+import wagtail
+
+
+if wagtail.VERSION >= (2, 0):
+    from wagtail.core.signals import page_published
+else:
+    from wagtail.wagtailcore.signals import page_published
 
 
 def new_phi(user, expiration_days=90, locked_days=1):

@@ -3,13 +3,20 @@ from django.utils.module_loading import import_string
 from django.utils.safestring import SafeText, mark_safe
 from django.utils.text import slugify
 
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailsnippets.blocks import SnippetChooserBlock
+import wagtail
 
 from bs4 import BeautifulSoup
 
 from v1.atomic_elements import atoms
 from v1.util.util import get_unique_id
+
+
+if wagtail.VERSION >= (2, 0):
+    from wagtail.core import blocks
+    from wagtail.snippets.blocks import SnippetChooserBlock
+else:
+    from wagtail.wagtailcore import blocks
+    from wagtail.wagtailsnippets.blocks import SnippetChooserBlock
 
 
 class AbstractFormBlock(blocks.StructBlock):

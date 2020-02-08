@@ -14,14 +14,9 @@ from django.utils.encoding import smart_text
 from django.utils.functional import cached_property
 from django.utils.safestring import mark_safe
 
+import wagtail
 from wagtail.contrib.table_block.blocks import TableBlock
 from wagtail.utils.widgets import WidgetWithScript
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.rich_text import DbWhitelister, expand_db_html
-from wagtail.wagtaildocs.blocks import DocumentChooserBlock
-from wagtail.wagtailimages import blocks as images_blocks
-from wagtail.wagtailsnippets.blocks import SnippetChooserBlock
 
 from jinja2 import Markup
 from taggit.models import Tag
@@ -29,6 +24,22 @@ from taggit.models import Tag
 from v1 import blocks as v1_blocks
 from v1.atomic_elements import atoms, molecules
 from v1.util import ref
+
+
+if wagtail.VERSION >= (2, 0):
+    from wagtail.core import blocks
+    from wagtail.core.models import Page
+    from v1.util.rich_text import DbWhitelister, expand_db_html
+    from wagtail.documents.blocks import DocumentChooserBlock
+    from wagtail.images import blocks as images_blocks
+    from wagtail.snippets.blocks import SnippetChooserBlock
+else:
+    from wagtail.wagtailcore import blocks
+    from wagtail.wagtailcore.models import Page
+    from wagtail.wagtailcore.rich_text import DbWhitelister, expand_db_html
+    from wagtail.wagtaildocs.blocks import DocumentChooserBlock
+    from wagtail.wagtailimages import blocks as images_blocks
+    from wagtail.wagtailsnippets.blocks import SnippetChooserBlock
 
 
 class AskSearch(blocks.StructBlock):

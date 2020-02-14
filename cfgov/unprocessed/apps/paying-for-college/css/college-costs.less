@@ -189,7 +189,7 @@
 				    	width: 100%;
 				    }
 
-				    .a-btn__link {
+				    .o-expandable_cue > span {
 				    	margin-left: unit( 10px / @base-font-size-px, em );
 				    }
 				}
@@ -240,13 +240,15 @@
 
 			&.affording,
 			&.make-a-plan {
+				
+			}
+
+			&.make-a-plan {
 				&_gap {
 					color: @red;
 					font-weight: 500;
 				}
-			}
 
-			&.make-a-plan {
 				.other-borrowing-btns {
 					button {
 					    margin: unit( 10px / @base-font-size-px, em ) 0;
@@ -257,6 +259,20 @@
 					font-size: unit( 16px / @base-font-size-px, em );
 					font-weight: 500;
 					margin-top: unit( 30px / @base-font-size-px, em );
+				}
+
+				.financial-item {
+					margin-top: 0em;
+				}
+
+				.o-expandable_content {
+					&:before {
+						border: none;
+					}
+					
+					.financial-item.form-group_item {
+						margin-top: 1em;
+					}
 				}
 			}
 

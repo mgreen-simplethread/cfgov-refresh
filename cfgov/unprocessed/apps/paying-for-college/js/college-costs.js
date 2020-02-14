@@ -12,6 +12,7 @@ import { schoolView } from './views/school-view.js';
 import { fixedSticky } from './views/fixed-sticky-view.js';
 
 import { updateState } from './dispatchers/update-state.js';
+import Expandable from '../../../../../node_modules/@cfpb/cfpb-expandables/src/Expandable.js';
 
 
 /* init() - Initialize the app */
@@ -23,6 +24,7 @@ const init = function() {
   schoolView.init( body );
   financialView.init( body );
   navigationView.init( body );
+  Expandable.init();
 
   financialModel.init();
 
@@ -31,10 +33,10 @@ const init = function() {
 
   fixedSticky.init( '.costs-not-covered' );
 
-  /* Get stuff started
+
      navigationView.activateGetStartedBtn();
      navigationView._handleGetStartedBtnClick();
-     updateState.activeSection( 'school-info' ); */
+     updateState.activeSection( 'make-a-plan' );
 
 };
 

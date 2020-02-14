@@ -827,127 +827,447 @@
 
             <p>From cheapest to most expensive, here are your options for closing that gap:</p>
 
-             <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper">
-                    <label class="form-label" for="plan_cost">
-                        Cost of attendance
-                    </label>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total__debt" data-financial-item="total_costs">$99,999</span>
-                    <button class="a-btn a-btn__link">{{ svg_icon('edit') }} Edit</button>
-                </div>
-                <div class="financial-note">
-                    <strong>Minimize indirect costs:</strong> Can you reduce your indirect costs by living at home or buying a refurbished laptop? 
-                </div>
-            </div>   
+            <div class="o-expandable-group">
+                <div class="o-expandable o-expandable__padded">
+                    <button class="o-expandable_header o-expandable_target financial-item"
+                            title="Expand content">
+                        <div class="financial-item_label-wrapper">
+                            <label class="form-label" for="plan_cost">
+                                Cost of attendance
+                            </label>
+                        </div>
+                        <div class="financial-item_input-wrapper">
+                            <span class="financial-item_total__debt" data-financial-item="total_costs">$99,999</span>
+                            <span class="o-expandable_header-right o-expandable_link">
+                                <span class="o-expandable_cue o-expandable_cue-open">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('edit') }} Edit</span>
+                                </span>
+                                <span class="o-expandable_cue o-expandable_cue-close">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('check-round') }} Save</span>
+                                </span>
+                            </span>
+                        </div>
 
-             <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper">
-                    <label class="form-label" for="plan_cost">
-                        Grants & Scholarships
-                    </label>
+                        <div class="financial-note">
+                            <strong>Minimize indirect costs:</strong> Can you reduce your indirect costs by living at home or buying a refurbished laptop? 
+                        </div>
+                    </button>
+                    <div class="o-expandable_content">
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="plan__tuition-fees">
+                                    Tuition and fees
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="plan__tuition-fees" name="plan__tuition-fees" data-financial-item="dirCost_tuition" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="plan__room-board">
+                                    Housing and meals
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="plan__room-board" name="plan__room-board" data-financial-item="dirCost_housing" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="plan__books">
+                                    Books
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="plan__books" name="plan__books" data-financial-item="indiCost_books" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="plan__other">
+                                    Other expenses
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="plan__other" name="plan__other" data-financial-item="indiCost_other" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="plan__transportation">
+                                    Transportation
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="plan__transportation" name="plan__transportation" data-financial-item="indiCost_transportation" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="" data-financial-item="total_grantsScholarships">$99,999</span>
-                    <button class="a-btn a-btn__link">{{ svg_icon('edit') }} Edit</button>
-                </div>
-                <div class="financial-note">
-                    <strong>Apply for additional grants and scholarships:</strong> Ask the financial aid office and your school counselor (if you’re currently in high school) for help. The Department of Education has more ideas here [link to ED page on scholarships]. 
-                </div>
-            </div>
 
-             <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper">
-                    <label class="form-label" for="plan_cost">
-                        Other resources
-                    </label>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="" data-financial-item="total_otherResources">$99,999</span>
-                    <button class="a-btn a-btn__link">{{ svg_icon('edit') }} Edit</button>
-                </div>
-                <div class="financial-note">
-                    <p><strong>Find more cash:</strong> Can you contribute more from savings or work? Can anyone in your family help you?</p> 
+                <div class="o-expandable o-expandable__padded">
+                    <button class="o-expandable_header o-expandable_target financial-item"
+                            title="Expand content">
+                        <div class="financial-item_label-wrapper">
+                            <label class="form-label" for="plan__grantsScholarships">
+                                Grants & Scholarships
+                            </label>
+                        </div>
+                        <div class="financial-item_input-wrapper">
+                            <span class="financial-item_total__debt" data-financial-item="total_grantsScholarships">$99,999</span>
+                            <span class="o-expandable_header-right o-expandable_link">
+                                <span class="o-expandable_cue o-expandable_cue-open">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('edit') }} Edit</span>
+                                </span>
+                                <span class="o-expandable_cue o-expandable_cue-close">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('check-round') }} Save</span>
+                                </span>
+                            </span>
+                        </div>
 
-                    <p><strong>Ask about tuition payment plans:</strong> If the school offers a no-cost or low-cost installment plan, you and your family may be able to budget for paying your tuition gradually over time. Ask the financial aid office. </p>
+                        <div class="financial-note">
+                            <strong>Apply for additional grants and scholarships:</strong> Ask the financial aid office and your school counselor (if you’re currently in high school) for help. The Department of Education has more ideas here [link to ED page on scholarships]. 
+                        </div>
+                        
+                    </button>
+                    <div class="o-expandable_content">
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="grants__pell">
+                                    Federal Pell Grants
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="grants__pell" name="grants__pell" data-financial-item="grant_pell" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="grants__seog">
+                                    Federal SEOG Grant
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="grants__seog" name="grants__seog" data-financial-item="grant_seog" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="grants__state">
+                                    State Grant
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="grants__state" name="grants__state" data-financial-item="grant_state" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="grants__school">
+                                    School Grant
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="grants__school" name="grants__school" data-financial-item="grant_school" autocorrect="off" value="0">
+                            </div>
+                        </div>
+
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="scholarships__school">
+                                    School scholarships
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="scholarships__school" name="scholarships__school" data-financial-item="scholarship_school" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="scholarships__state">
+                                    State scholarships
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="scholarships__state" name="scholarships__state" data-financial-item="scholarship_state" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="scholarships__other">
+                                    Other scholarships
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="scholarships__other" name="scholarships__other" data-financial-item="scholarship_other" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper">
-                    <label class="form-label" for="plan_cost">
-                        Federal Loans
-                    </label>
+                <div class="o-expandable o-expandable__padded">
+                    <button class="o-expandable_header o-expandable_target financial-item"
+                            title="Expand content">
+                        <div class="financial-item_label-wrapper">
+                            <label class="form-label" for="plan__grantsScholarships">
+                                Other Resources
+                            </label>
+                        </div>
+                        <div class="financial-item_input-wrapper">
+                            <span class="financial-item_total__debt" data-financial-item="total_otherResources">$99,999</span>
+                            <span class="o-expandable_header-right o-expandable_link">
+                                <span class="o-expandable_cue o-expandable_cue-open">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('edit') }} Edit</span>
+                                </span>
+                                <span class="o-expandable_cue o-expandable_cue-close">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('check-round') }} Save</span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="financial-note">
+                            <p><strong>Find more cash:</strong> Can you contribute more from savings or work? Can anyone in your family help you?</p> 
+
+                            <p><strong>Ask about tuition payment plans:</strong> If the school offers a no-cost or low-cost installment plan, you and your family may be able to budget for paying your tuition gradually over time. Ask the financial aid office. </p>
+                        </div>    
+                    </button>
+                    <div class="o-expandable_content">
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="savings__personal">
+                                    Personal savings
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="savings__personal" name="savings__personal" data-financial-item="savings_personal" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="savings__family">
+                                    Family contribution
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="savings__family" name="savings__family" data-financial-item="savings_family" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="income__job">
+                                    Estimated off-campus job income
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="income__job" name="income__job" data-financial-item="income_job" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="income__tanf">
+                                    Estimated income from TANF
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="income__tanf" name="income__tanf" data-financial-item="income_tanf" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="income__snap">
+                                    Estimated income from SNAP
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="income__snap" name="income__snap" data-financial-item="income_snap" autocorrect="off" value="0">
+                            </div>
+                        </div>                        
+                    </div>  
                 </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="" data-financial-item="total_fedLoans">$99,999</span>
-                    <button class="a-btn a-btn__link">{{ svg_icon('edit') }} Edit</button>
+
+                <div class="o-expandable o-expandable__padded">
+                    <button class="o-expandable_header o-expandable_target financial-item"
+                            title="Expand content">
+                        <div class="financial-item_label-wrapper">
+                            <label class="form-label" for="XXX">
+                                Federal Loans
+                            </label>
+                        </div>
+                        <div class="financial-item_input-wrapper">
+                            <span class="financial-item_total__debt" data-financial-item="total_fedLoans">$99,999</span>
+                            <span class="o-expandable_header-right o-expandable_link">
+                                <span class="o-expandable_cue o-expandable_cue-open">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('edit') }} Edit</span>
+                                </span>
+                                <span class="o-expandable_cue o-expandable_cue-close">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('check-round') }} Save</span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="financial-note">
+                            <strong>Take out more federal loans:</strong> Generally, your financial aid offer includes the maximum amount of Direct Loans available to you. Contact the financial aid office to find out more.
+                        </div>  
+                    </button>
+                    <div class="o-expandable_content">
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="loans__directSub">
+                                    DIRECT Subsidized Loan
+                                </label>
+                                <span class="label-note">Interest starts accumulating 6 months after you leave school</span>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="loans__directSub" name="loans__directSub" data-financial-item="fedLoan_directSub" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <span class="static-label" for="loans__directSubRate">Interest rate (%)</span>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <span id="loans__directSubRate" class="financial-item" data-financial-item="rate_directSub">9.99%</span>
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <span class="static-label" for="loans__directSubFee">Loan fee (%)</span>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <span id="loans__directSubFee" class="financial-item" data-financial-item="fee_directSub">9.99%</span>
+                            </div>
+                        </div>
+
+                        <div class="financial-item form-group_item financial-item__spaced">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="loans__directUnsub">
+                                    DIRECT Unsubsidized Loans
+                                </label>
+                                <span class="label-note">Interest starts accumulating 6 months after you leave school</span>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="loans__directUnsub" name="loans__directUnsub" data-financial-item="fedLoan_directUnsub" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <span class="static-label" for="">Interest rate (%)</span>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <span class="financial-item" data-financial-item="rate_directUnsub">9.99%</span>
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <span class="static-label" for="">Loan fee (%)</span>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <span class="financial-item" data-financial-item="fee_directUnsub">9.99%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="financial-note">
-                    <strong>Take out more federal loans:</strong> Generally, your financial aid offer includes the maximum amount of Direct Loans available to you. Contact the financial aid office to find out more.
+
+                <div class="o-expandable o-expandable__padded">
+                    <button class="o-expandable_header o-expandable_target financial-item"
+                            title="Expand content">
+                        <div class="financial-item_label-wrapper">
+                            <label class="form-label" for="XXX">
+                                Other Loans
+                            </label>
+                        </div>
+                        <div class="financial-item_input-wrapper">
+                            <span class="financial-item_total__debt" data-financial-item="total_schoolLoans">$99,999</span>
+                            <span class="o-expandable_header-right o-expandable_link">
+                                <span class="o-expandable_cue o-expandable_cue-open">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('edit') }} Edit</span>
+                                </span>
+                                <span class="o-expandable_cue o-expandable_cue-close">
+                                    <span class="u-visually-hidden-on-mobile">{{ svg_icon('check-round') }} Save</span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="financial-note">
+                        <strong>Borrow more from the school:</strong> Contact the financial aid office to find out more. Remember, these loans may not offer the same protections as federal student loans.
+                        </div>  
+                    </button>
+
+                    <div class="o-expandable_content">
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="loans__schoolLoan">
+                                    Institutional loan
+                                </label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input type="text" id="loans__schoolLoan" name="loans__schoolLoan" data-financial-item="instiLoan_institutional" autocorrect="off" value="0">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="loans__schoolLoanRate">Interest rate (%)</label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input id="loans__schoolLoanRate" name="loans__schoolLoanRate" data-financial-item="rate_institutionalLoan" value="9.99%">
+                            </div>
+                        </div>
+                        <div class="financial-item form-group_item">
+                            <div class="financial-item_label-wrapper">
+                                <label class="form-label" for="loans__schoolLoanFee">Loan fee (%)</label>
+                            </div>
+                            <div class="financial-item_input-wrapper">
+                                <input id="loans__schoolLoanFee" name="loans__schoolLoanFee" data-financial-item="fee_institutionalLoan" value="9.99%">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper">
-                    <label class="form-label" for="plan_cost">
-                        Institutional loans
-                    </label>
+
+                <div class="financial-item form-group_item financial-item__lined">
+                    <div class="financial-item_label-wrapper financial-item_total">
+                        <span class="financial-item_total">Uncovered costs</span>
+                    </div>
+                    <div class="financial-item_input-wrapper">
+                        <span class="financial-item_total financial-item_total" data-financial-item="total_gap">$99,999</span>
+                    </div>
                 </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="" data-financial-item="total_schoolLoans">$99,999</span>
-                    <button class="a-btn a-btn__link">{{ svg_icon('edit') }} Edit</button>
+
+                <h3 class="other-loan-options">Other loan options</h3>
+
+                <p>After working with the financial aid office to exhaust all other options, there are two more options: private student loans and federal Parent PLUS Loans. You or a family member can apply for a <strong>private student loan</strong> from a bank or credit union; students without credit history are typically required to have a family member cosign as a fellow borrower on the loan. Parents can apply for a <strong>Parent PLUS Loan</strong> from the US Department of Education.  </p>
+
+                <div class="other-borrowing-btns">
+                    <button class="a-btn a-btn__add">{{ svg_icon('plus-round') }} Add a private loan to your plan if you have an offer from a lender.</button>
+                    <button class="a-btn a-btn__add">{{ svg_icon('plus-round') }} Add Parent PLUS loan</button>
                 </div>
-                <div class="financial-note">
-                    <strong>Borrow more from the school:</strong> Contact the financial aid office to find out more. Remember, these loans may not offer the same protections as federal student loans 
+
+                <div class="m-notification m-notification__visible m-notification__warning">
+                    {{ svg_icon('warning-round') }}
+                    <div class="m-notification_content">
+                        <div class="h4 m-notification_message">Know before you go</div>
+                        <ul>
+                            <li><strong>Accessibility</strong>: Parent PLUS Loans require a less thorough credit check. All borrowers can save money by comparison shopping—apply to multiple lenders to get the best terms.</li>
+
+                            <li><strong>Cost</strong>: For borrowers and cosigners with strong credit, private loans may offer lower interest rates than Parent PLUS Loans. Any borrower can save money on interest by starting repayment as soon as possible.</li>
+
+                            <li><strong>Protections</strong>: Private loans are not legally required to offer the same borrower protections and repayment options as Federal Direct Loans. Parent PLUS loans offer some, but not all, of the protections as Federal Direct Loans.</li>
+
+                            <li><strong>Risk</strong>: With both types of loans, borrowers and cosigners risk harm to their credit score if the debt is not repaid on time. Parents and other family members should consider whether they have saved enough for emergencies and retirement when deciding whether to borrow money for their student’s education.</li>
+
+                            <li><strong>Further guidance</strong>: Visit the Department of Education for a detailed discussion of loan options.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper financial-item_total">
-                    <span class="financial-item_total">Uncovered costs</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total financial-item_total" data-financial-item="total_gap">$99,999</span>
-                </div>
-            </div>
-
-            <h3 class="other-loan-options">Other loan options</h3>
-
-            <p>After working with the financial aid office to exhaust all other options, there are two more options: private student loans and federal Parent PLUS Loans. You or a family member can apply for a <strong>private student loan</strong> from a bank or credit union; students without credit history are typically required to have a family member cosign as a fellow borrower on the loan. Parents can apply for a <strong>Parent PLUS Loan</strong> from the US Department of Education.  </p>
-
-            <div class="other-borrowing-btns">
-                <button class="a-btn a-btn__add">{{ svg_icon('plus-round') }} Add a private loan to your plan if you have an offer from a lender.</button>
-                <button class="a-btn a-btn__add">{{ svg_icon('plus-round') }} Add Parent PLUS loan</button>
-            </div>
-
-            <div class="m-notification m-notification__visible m-notification__warning">
-                {{ svg_icon('warning-round') }}
-                <div class="m-notification_content">
-                    <div class="h4 m-notification_message">Know before you go</div>
-                    <ul>
-                        <li><strong>Accessibility</strong>: Parent PLUS Loans require a less thorough credit check. All borrowers can save money by comparison shopping—apply to multiple lenders to get the best terms.</li>
-
-                        <li><strong>Cost</strong>: For borrowers and cosigners with strong credit, private loans may offer lower interest rates than Parent PLUS Loans. Any borrower can save money on interest by starting repayment as soon as possible.</li>
-
-                        <li><strong>Protections</strong>: Private loans are not legally required to offer the same borrower protections and repayment options as Federal Direct Loans. Parent PLUS loans offer some, but not all, of the protections as Federal Direct Loans.</li>
-
-                        <li><strong>Risk</strong>: With both types of loans, borrowers and cosigners risk harm to their credit score if the debt is not repaid on time. Parents and other family members should consider whether they have saved enough for emergencies and retirement when deciding whether to borrow money for their student’s education.</li>
-
-                        <li><strong>Further guidance</strong>: Visit the Department of Education for a detailed discussion of loan options.</li>
-                    </ul>
-                </div>
-               
-                
-            </div>
-
-            <div class="financial-item form-group_item financial-item__lined">
-                <div class="financial-item_label-wrapper financial-item_total">
-                    <span class="financial-item_total">Uncovered costs</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total financial-item_total" data-financial-item="total_gap">$99,999</span>
+                <div class="financial-item form-group_item financial-item__lined">
+                    <div class="financial-item_label-wrapper financial-item_total">
+                        <span class="financial-item_total">Uncovered costs</span>
+                    </div>
+                    <div class="financial-item_input-wrapper">
+                        <span class="financial-item_total financial-item_total" data-financial-item="total_gap">$99,999</span>
+                    </div>
                 </div>
             </div>
 

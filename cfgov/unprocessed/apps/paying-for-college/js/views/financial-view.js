@@ -33,7 +33,7 @@ const financialView = {
    * Listeners for INPUT fields and radio buttons
    */
   _addInputListeners: function() {
-    financialView._financialItems.forEach( elem => {
+    financialView._financialInputs.forEach( elem => {
       const events = {
         keyup: this._handleInputChange,
         focusout: this._handleInputChange

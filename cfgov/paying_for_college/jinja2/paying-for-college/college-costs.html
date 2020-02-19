@@ -27,25 +27,31 @@
     <div class="m-hero">
         <div class="m-hero_wrapper wrapper">
             <div class="m-hero_text">
-                <h1 class="m-hero_heading">Financing your future</h1>
-                <p>You’re about to spend a lot of time, money, and hard work—make sure your investment pays off.</p>
+                <h1 class="m-hero_heading">Your financial path to graduation</h1>
+                <p> Have a financial aid offer? We’ll help you plan to finish your program with minimal debt.</p>
 
-                <p>Turn a financial aid offer into a plan to pay for college that fits your needs. This tool will help you :</p>
-                <ul>
-                    <li>Figure out how to cover costs with the least debt needed</li>
-                    <li>Estimate how much debt you’ll finish with</li>
-                    <li>See the potential impact of this debt on your future</li>
-                    <li>Determine your next steps</li>
-                </ul>
+                
             </div>
             <div class="m-hero_image-wrapper">
                 <div class="m-hero_image" style="background-image: url({{ static('apps/paying-for-college/img/ph-hero.png') }})"></div>
             </div>
         </div>
     </div>
+<h2>This tool can help you:</h2>
+                <ul>
+                    <li>Understand your offer</li>
+                    <li> Plan to cover the remaining costs</li>
+                    <li> Estimate how much you’ll owe and if you can afford that debt </li>
+                    <li> Compare offers from different schools</li>
+             <li> Decide what to do next</li>
+                </ul>
 
-    <h2>To start...</h2>
-    <p>You will need:</p>
+<h2> Keep coming back as your plan evolves.</h2>
+
+    <p> Figuring out how to pay for school is complex for many students. Making your plan may require multiple conversations with family, advisers, and the school financial aid office to get more information. Come back and update your plan as many times as you need! (This tool does not save your personal data. Read more about how this tool protects your privacy.)</p>
+
+    
+<h2>To start, you will need:</h2>
     <ul>
         <li>Your financial aid offer</li>
         <li>An idea of how much money you and your family can put towards school</li>
@@ -218,15 +224,18 @@
             </div>
 
             <div class="costs_content-section costs_content-section_content" data-offer-costs-info="yes">
-                <p>Type in the costs listed in your offer. Please note that these are estimates—the actual amounts will depend on factors like which courses you enroll in and your personal budgeting. Use the estimates in your offer letter unless you’re sure your spending will be radically different.</p>
+                <p> Type in the costs listed in your offer, adding additional costs as needed. </p>
+        <p>These are estimates based on students’ reported spending. Your actual expenses will depend on which courses you take, whether you have dependents, your personal budgeting, and other factors.</p>
+        <p>These estimates are used for calculating how much aid you can receive. If you think you will spend more, contact the school’s financial aid office—you may be eligible for more aid.</p>
             </div>
             <div class="costs_content-section costs_content-section_content" data-offer-costs-info="no">
-                <p>We’ve used older data about the school collected by the Department of Education to fill in the estimated cost to attend this school below. The actual costs will probably be different.</p>
+                <p> This is the most recent data from the US Department of Education. Your actual spending will depend on which courses you take, whether you have dependents, your personal budgeting, and other factors.</p> 
+<p>These estimates are used for calculating how much aid you can receive. If you think you will spend more, contact the school’s financial aid office—you may be eligible for more aid.</p>
             </div>
 
             <div class="costs_content-section" id="costs_inputs-section">
                 <h3 class="header_bottom-line">Direct costs</h3>
-                <p>Direct costs are what the school charges you for directly. Your actual costs may vary.</p>
+                <p> Direct costs are what the school will charge you for at the beginning of each term. Your actual bill will vary from the numbers here. </p>
                 <div class="financial-item form-group_item">
                     <div class="financial-item_label-wrapper">
                         <label class="form-label" for="costs__tuition-fees">
@@ -249,7 +258,7 @@
                 </div>
                 <div class="financial-item form-group_item">
                     <div class="financial-item_label-wrapper">
-                        <span class="financial-item_total">Total direct costs</span>
+                        <span class="financial-item_total">Estimated direct costs</span>
                     </div>
                     <div class="financial-item_input-wrapper">
                         <span class="financial-item_total financial-item_total__debt" data-financial-item="total_directCosts">$99,999</span>
@@ -257,11 +266,11 @@
                 </div>
 
                 <h3 class="header_bottom-line">Indirect costs</h3>
-                <p>Indirect costs are for other school year necessities, like traveling between home and school and childcare. Though these vary from student to student, these estimates are a good starting point. Adjust the categories and amounts below to match what your financial aid offer says, and add important expenses that might not be listed.</p>
+                <p> Indirect costs are for other school year necessities, like childcare and traveling between home and school. Though these vary from student to student, start with the numbers in your offer and then adjust as needed.</p>
                 <div class="financial-item form-group_item">
                     <div class="financial-item_label-wrapper">
                         <label class="form-label" for="costs__books">
-                            Books
+                            Books   
                         </label>
                     </div>
                     <div class="financial-item_input-wrapper">
@@ -291,7 +300,7 @@
 
                 <div class="financial-item form-group_item">
                     <div class="financial-item_label-wrapper">
-                            <span class="financial-item_total">Total indirect costs</span>
+                            <span class="financial-item_total">Estimated indirect costs</span>
                     </div>
                     <div class="financial-item_input-wrapper">
                         <span class="financial-item_total financial-item_total__debt" data-financial-item="total_indirectCosts">$99,999</span>
@@ -300,12 +309,23 @@
 
                 <div class="financial-item financial-item__lined form-group_item">
                     <div class="financial-item_label-wrapper">
-                            <span class="financial-item_total financial-item_total__large">Cost of attendance (for one year)</span>
+                            <span class="financial-item_total financial-item_total__large">Estimated cost of attendance this year</span>
                     </div>
                     <div class="financial-item_input-wrapper">
                         <span class="financial-item_total financial-item_total__debt financial-item_total__large" data-financial-item="total_costs">$99,999</span>
                     </div>
                 </div>
+
+            <div class="m-notification m-notification__visible m-notification__success">
+                {{ svg_icon('dollar-round') }}
+                <div class="m-notification_content">
+                    <div class="h4 m-notification_message">Money saving tips</div>
+                    <p>Stay enrolled as a full-time student (typically 12 credit hours, or 4 courses, per term). It will make it easier to graduate on time, which will cut costs and allow you to pursue a full-time salary sooner. Plus, many schools require full-time enrollment for full financial aid eligibility. </p>                
+        </div>
+            </div>
+            
+            
+
 
 
                 <div class="college-costs_tool-section_buttons">
@@ -358,7 +378,7 @@
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
                     <label class="form-label" for="grants__state">
-                        State Grant
+                        State Grant(s)
                     </label>
                 </div>
                 <div class="financial-item_input-wrapper">
@@ -368,7 +388,7 @@
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
                     <label class="form-label" for="grants__school">
-                        School Grant
+                        School Grant(s)
                     </label>
                 </div>
                 <div class="financial-item_input-wrapper">
@@ -389,28 +409,30 @@
 
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
-                    <label class="form-label" for="scholarships__school">
-                        School scholarships
-                    </label>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <input type="text" id="scholarships__school" name="scholarships__school" data-financial-item="scholarship_school" autocorrect="off" value="0">
-                </div>
-            </div>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
                     <label class="form-label" for="scholarships__state">
-                        State scholarships
+                        State scholarship(s)
                     </label>
                 </div>
                 <div class="financial-item_input-wrapper">
                     <input type="text" id="scholarships__state" name="scholarships__state" data-financial-item="scholarship_state" autocorrect="off" value="0">
                 </div>
             </div>
+
+        <div class="financial-item form-group_item">
+                <div class="financial-item_label-wrapper">
+                    <label class="form-label" for="scholarships__school">
+                        School scholarship(s)
+                    </label>
+                </div>
+                <div class="financial-item_input-wrapper">
+                    <input type="text" id="scholarships__school" name="scholarships__school" data-financial-item="scholarship_school" autocorrect="off" value="0">
+                </div>
+            </div>
+            
             <div class="financial-item form-group_item">
                 <div class="financial-item_label-wrapper">
                     <label class="form-label" for="scholarships__other">
-                        Other scholarships
+                        Other scholarship(s)
                     </label>
                 </div>
                 <div class="financial-item_input-wrapper">
@@ -441,7 +463,8 @@
                 <div class="m-notification_content">
                     <div class="h4 m-notification_message">Know before you go</div>
                     <ul>
-                        <li>Make sure you know the requirements of your grants and scholarships (such as minimum GPA).</li>
+                        <li> Applying for a grant or scholarship does not guarantee you will get it. You may need to reapply each year (like with FAFSA for federal grants and loans).</li>
+            <li>Know the requirements of your grants and scholarships. For example, you may need to stay enrolled in a minimum number of courses or keep your grades above a minimum GPA. </li>
                         <li>Your grant and scholarship funding can change from year to year, depending on your eligibility, your financial situation, the terms of the funding, and other factors.</li>
                         <li>Receiving private scholarships can reduce your eligibility for grants or scholarships from the school.</li>
                         <li>Scholarship money may be taxed as income if it exceeds the total of certain expenses. Ask the financial aid office if this might be an issue for you.</li>
@@ -506,9 +529,9 @@
 
             <h2>Federal Loans</h2>
 
-            <p>Federal loans include  protections typically not included with private loans. Subsidized federal loans are cheaper because they do not gather interest until after you leave school. Unsubsidized federal loans start gathering interest as soon as you take them out. </p>
+            <p> Any student loan must be repaid, with interest. Federal loans include some borrower protections and repayment options that are not typically offered by private loans.</p>
 
-            <p>[While anyone can borrow unsubsidized loans (in limited amounts), you must demonstrate need on FAFSA to qualify for a subsidized loan.]</p>
+            <p>Undergraduates have access to two types of federal loans, Direct Subsidized and Direct Unsubsidized. For both, there are limits on how much you can borrow. Subsidized loans are cheaper because you don’t pay interest until 6 months after you leave school. Your FAFSA must show a certain amount of need to get subsidized loans, but anyone can take out unsubsidized loans. </p>
 
             <div class="costs-not-covered">
                 <div class="costs-not-covered_title">Costs not covered yet</div>
@@ -520,7 +543,7 @@
                     <label class="form-label" for="loans__directSub">
                         DIRECT Subsidized Loan
                     </label>
-                    <span class="label-note">Interest starts accumulating 6 months after you leave school</span>
+                    <span class="label-note"> Cheaper because you don’t get charged interest until 6 months after leaving school</span>
                 </div>
                 <div class="financial-item_input-wrapper">
                     <input type="text" id="loans__directSub" name="loans__directSub" data-financial-item="fedLoan_directSub" autocorrect="off" value="0">
@@ -548,7 +571,7 @@
                     <label class="form-label" for="loans__directUnsub">
                         DIRECT Unsubsidized Loans
                     </label>
-                    <span class="label-note">Interest starts accumulating 6 months after you leave school</span>
+                    <span class="label-note"> You get charged interest as soon as you receive your first loan</span>
                 </div>
                 <div class="financial-item_input-wrapper">
                     <input type="text" id="loans__directUnsub" name="loans__directUnsub" data-financial-item="fedLoan_directUnsub" autocorrect="off" value="0">
@@ -599,7 +622,7 @@
                     <div class="h4 m-notification_message">Know before you go</div>
                     <ul>
                         <li>Because student debt is permanent, you should not use student loans to cover costs outside of your education. (For example, you can use student loan funds to pay for childcare but not to buy a car.)</li>
-                        <li>Federal loans do not provide a government guarantee of the quality of the school.  Federal loans do not guarantee that you will get a good job when you graduate.</li>
+                        <li>Federal loans do not provide a government guarantee of the quality of the school. Federal loans do not guarantee that you will get a good job when you graduate.</li>
                         <li>You have to pay back your loans even if you don’t graduate.</li>
                     </ul>
                 </div>
@@ -612,9 +635,9 @@
         </section>
 
         <section class="college-costs_tool-section" data-tool-section="school-loans">
-            <h2>Institutional loans</h2>
+            <h2> Loans from your state, the school, and nonprofits </h2>
 
-            <p>Your school may offer you loans directly or through a bank. Before taking on this debt, do your research to make sure they are the best option for you. If you think you may want to use this funding, enter it below. (Entering it here does not obligate you to borrow this money.)</p>
+            <p>Your state, this school, or a nonprofit may offer you loans directly or through a bank. Before taking on this debt, do your research to make sure they are the best option for you. If you think you may want to use this funding, enter it below. (Entering it here does not obligate you to borrow this money.)</p>
 
             <div class="costs-not-covered">
                 <div class="costs-not-covered_title">Costs not covered yet</div>
@@ -661,7 +684,8 @@
                 <div class="m-notification_content">
                     <div class="h4 m-notification_message">Money saving tips</div>
                     <ul>
-                        <li>Compare loans from your school to other federal and private options. Look at the terms: the interest rate, whether interest accumulates during school, whether you’ll have to start repaying the loan immediately after leaving school, and whether there are flexible repayment options. </li>
+                        <li>Compare these loans to other federal and private options. Look at the terms: the interest rate, whether interest accumulates during school, whether you’ll have to start repaying the loan immediately after leaving school, and whether there are flexible repayment options. </li>
+            <li> Many schools offer low-cost or no-cost tuition payment plans. These break up a term’s tuition into periodic payments instead of one lump payment at the beginning of the term, allowing you to pay tuition as you (and/or your family) earn over time.</li>
                     </ul>
                 </div>
             </div>
@@ -670,10 +694,8 @@
                 {{ svg_icon('warning-round') }}
                 <div class="m-notification_content">
                     <div class="h4 m-notification_message">Know before you go</div>
-                    <ul>
-                        <li>Loans from your school or from a bank or credit union may not offer the same protections as federal student loans.</li>
-                    </ul>
-                </div>
+                    <p>Loans from your school or from a bank or credit union may not offer the same protections as federal student loans. </p>               
+        </div>
             </div>
             
 
@@ -754,14 +776,20 @@
                 </div>
             </div>
 
+<div class="m-notification m-notification__visible m-notification__success ">
+                {{ svg_icon('dollar-round') }}
+                <div class="m-notification_content">
+                    <div class="h4 m-notification_message">Money saving tip</div>
+                    <p>Some states offer grants and funding for specific costs related to education, like childcare. Ask the financial aid office or your state or territory’s child care fund. </p>
+                </div>
+            </div>
+
+
             <div class="m-notification m-notification__visible">
                 {{ svg_icon('information-round') }}
                 <div class="m-notification_content">
                     <div class="h4 m-notification_message">Did you know?</div>
-                    <ul>
-                        <li>Studies suggest that working up to 20 hours a week is associated with better grades, but students who work more than 20 hours a week are more likely to struggle academically. Low grades put financial aid eligibility at risk. </li>
-                        <li>Some states offer grants and funding for specific costs related to education, like childcare. Ask the financial aid office or your state or territory’s child care fund. </li>
-                    </ul>
+                        <p>Studies suggest that working up to 20 hours a week is associated with better grades, but students who work more than 20 hours a week are more likely to struggle academically. Low grades put financial aid eligibility at risk. </p>
                 </div>
             </div>
 
@@ -774,7 +802,7 @@
         <section class="college-costs_tool-section" data-tool-section="loan-counseling">
             <h2>How do student loans work?</h2>
 
-            <p>Since you will probably use loans to pay for school—most students do—it’s important to understand how they work. This page will overview the general cost of borrowing money and detail some of the unique traits of student loans.</p> 
+            <p> Next you will make a plan to cover remaining costs. Since you will probably use loans to pay for school—most students do—it’s important to understand how they work. This page will overview the general cost of borrowing money and detail some of the unique traits of student loans.</p> 
             
             <p>Loans are money you pay back with interest. That means you'll pay more than you originally borrowed. For example, if you borrow $10,000 with 4% annual interest, you will accrue $400 in interest during the first year.</p> 
             
@@ -783,10 +811,11 @@
             <ul>
                 <li>borrow less</li>
                 <li>borrow at a lower interest rate</li>
+         <li> pay down interest on unsubsidized debt before repayment begins (to avoid interest on interest)</li>
                 <li>repay your loans faster by making bigger monthly payments.</li> 
             </ul>
             
-            <p>As this graph shows, someone with about $30,000 in student loans (typical for college undergraduates) will save more than $10,000 in interest by repaying their loan in 10 years instead than 25 years.</p> 
+            <p>As this graph shows, someone with about $30,000 in student loans (typical for college undergraduates) will save more than $10,000 in interest by repaying their loan in 10 years instead of 25 years.</p> 
             
             <img src="{{ static('apps/paying-for-college/img/ph-loan-explainer.png') }}" style="margin: 30px 0">
 
@@ -815,7 +844,7 @@
             <div class="m-notification m-notification__visible m-notification__error">
                 {{ svg_icon('information-round') }}
                 <div class="m-notification_content">
-                    You have <span class="make-a-plan_gap" data-financial-item="total_gap">$XX,XXX</span> of uncovered costs for this year of schooling. Make a plan to get this down to $0.
+                    You have <span class="make-a-plan_gap" data-financial-item="total_gap">$XX,XXX</span> of uncovered costs for this year of schooling. Make a plan to get this down to $0. You may need more information from your family, the financial aid office, scholarship organizations, and others. When you get it, come back and update your plan.
                 </div>
             </div>
 
@@ -927,7 +956,7 @@
                         </div>
 
                         <div class="financial-note">
-                            <strong>Apply for additional grants and scholarships:</strong> Ask the financial aid office and your school counselor (if you’re currently in high school) for help. The Department of Education has more ideas here [link to ED page on scholarships]. 
+                            <strong>Apply for additional grants and scholarships:</strong> Ask the financial aid office and your school counselor (if you’re currently in high school) for help. The Department of Education has more ideas here. 
                         </div>
                         
                     </button>
@@ -1236,7 +1265,10 @@
 
                 <h3 class="other-loan-options">Other loan options</h3>
 
-                <p>After working with the financial aid office to exhaust all other options, there are two more options: private student loans and federal Parent PLUS Loans. You or a family member can apply for a <strong>private student loan</strong> from a bank or credit union; students without credit history are typically required to have a family member cosign as a fellow borrower on the loan. Parents can apply for a <strong>Parent PLUS Loan</strong> from the US Department of Education.  </p>
+                <p> If you still have uncovered costs after working with the financial aid office to exhaust all the options listed above, you and your family have two more loan options to consider. </p>
+            <ul>
+                <li><strong>Private student loan</strong>: You or a family member can apply for a private student loan from a bank or credit union. Applying to multiple lenders can help you get the best deal. Students without credit history are typically required to have a family member cosign as a fellow borrower on the loan.</li>
+                <li><strong> Federal parent PLUS loan </strong>: Depending on the school, parents and stepparents may be able apply for a parent PLUS loan from the U.S. Department of Education. Check with the financial aid office before including this in your plan.</li>
 
                 <div class="other-borrowing-btns">
                     <button class="a-btn a-btn__add">{{ svg_icon('plus-round') }} Add a private loan to your plan if you have an offer from a lender.</button>
@@ -1252,11 +1284,11 @@
 
                             <li><strong>Cost</strong>: For borrowers and cosigners with strong credit, private loans may offer lower interest rates than Parent PLUS Loans. Any borrower can save money on interest by starting repayment as soon as possible.</li>
 
-                            <li><strong>Protections</strong>: Private loans are not legally required to offer the same borrower protections and repayment options as Federal Direct Loans. Parent PLUS loans offer some, but not all, of the protections as Federal Direct Loans.</li>
+                            <li><strong>Protections</strong>: Parent PLUS loans offer some, but not all, of the protections as Federal Direct Loans to students. Private loans are not legally required to offer the same borrower protections and repayment options as any federal loans.</li>
 
                             <li><strong>Risk</strong>: With both types of loans, borrowers and cosigners risk harm to their credit score if the debt is not repaid on time. Parents and other family members should consider whether they have saved enough for emergencies and retirement when deciding whether to borrow money for their student’s education.</li>
 
-                            <li><strong>Further guidance</strong>: Visit the Department of Education for a detailed discussion of loan options.</li>
+                            <li><strong>Further guidance</strong>: Visit the Department of Education for a detailed discussion of loan options. You can also contact the financial aid office.</li>
                         </ul>
                     </div>
                 </div>
@@ -1290,7 +1322,7 @@
             <p>Your projected total debt at the end of the program (assuming similar borrowing each year).</p>
 
             <div class="number-callout">
-                <h4 class="number-callout_header">Median salary of [school]'s graduates</h4>
+                <h4 class="number-callout_header">Median first-year salary of this school's graduates</h4>
                 <div class="number-callout_value"><span data-financial-item="salary_annual">$48,200</span></div>
             </div>
 
@@ -1299,7 +1331,7 @@
             <div class="m-notification m-notification__visible m-notification__error">
                 {{ svg_icon('information-round') }}
                 <div class="m-notification_content">
-                    <div class="h4 m-notification_message">It's recommended that you keep your total debt under your expected salary.</div>
+                    <div class="h4 m-notification_message"> Your projected total debt is more than the median first-year salary of this school’s graduates.</div>
                     <p> Your projected total debt is <span data-financial-item="total_debtRuleGap">$XXXX</span> higher than the median salary of this school’s students six years after enrollment. Your actual salary will depend on many different factors, including your field of work and where you live. Visit the BLS Wage Data site for more information.</p>
                 </div>
             </div>
@@ -1313,7 +1345,7 @@
         <section class="college-costs_tool-section" data-tool-section="cost-of-borrowing">
             <h2>What will interest cost me?</h2>
 
-            <p>If you can reduce the amount you borrow, you'll save even more in the long run on interest payments. This page compares the total cost of your projected debt to the cost of borrowing a little less or a little more.</p>
+            <p> This page depicts the total cost of borrowing if you repay your debt in 10 years on the standard repayment plan.</p>
 
             <img src="{{ static('apps/paying-for-college/img/ph-cost-of-borrowing.png') }}" style="margin: 30px 0">
 
@@ -1343,62 +1375,11 @@
                 </div>
             </div>
 
-            <h3 class="header_bottom-line">Cost of borrowing 10% more</h3>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
-                    <span>Total money borrowed</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total" data-financial-itemX="total_borrowing__tenMore">$58,850</span>
-                </div>     
-            </div>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
-                    <span>Interest with 10-year repayment plan</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total" data-financial-itemX="total_interest10year__tenMore">$22,058</span>
-                </div>
-            </div>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
-                    <span>Total cost of borrowing</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total financial-item_total__debt" data-financial-itemX="total_debt10year__tenMore">$80,908</span>
-                </div>
-            </div>
-
-            <h3 class="header_bottom-line">Cost of borrowing 10% less</h3>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
-                    <span>Total money borrowed</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total" data-financial-itemX="total_borrowing__tenLess">$48,150</span>
-                </div>     
-            </div>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
-                    <span>Interest with 10-year repayment plan</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total" data-financial-itemX="total_interest10year__tenLess">$18,048</span>
-                </div>
-            </div>
-            <div class="financial-item form-group_item">
-                <div class="financial-item_label-wrapper">
-                    <span>Total cost of borrowing</span>
-                </div>
-                <div class="financial-item_input-wrapper">
-                    <span class="financial-item_total financial-item_total__debt" data-financial-itemX="total_debt10year__tenLess">$66,198</span>
-                </div>
-            </div>
             <div class="m-notification m-notification__visible m-notification__success ">
                 {{ svg_icon('dollar-round') }}
                 <div class="m-notification_content">
                     <div class="h4 m-notification_message">Money saving tip</div>
-                    <p>To lower the total cost of your loans, make room in your in-school budget for payments towards the interest on your private and unsubsidized federal loans. This will reduce the amount you pay due to <em>capitalization</em> — interest on your interest. </p>
+                    <p>To lower the total cost of your loans, make room in your in-school budget for payments towards the interest on your private and unsubsidized federal loans. This will save you money on <em>capitalization</em> — interest on your interest. </p>
                 </div>
             </div>
 
@@ -1412,16 +1393,16 @@
             <h2>Can I afford my payment?</h2>
 
 
-            <p>Skipping monthly loan payments can cause other financial problems for you. This page will help you check whether your projected future salary would cover your loan payment along with other living expenses.</p>
+            <p> Skipping monthly loan payments can cause financial and legal problems. Default—missing too many payments—can result in low credit scores, additional fees, wage garnishment, and ineligibility for further federal student aid. This page gives you two ways to estimate the affordability of your projected monthly payment.</p>
 
             <div class="number-callout number-callout__lined">
-                <h4 class="number-callout_header">Monthly loan payment</h4>
+                <h4 class="number-callout_header">Estimated monthly loan payment</h4>
                 <div class="number-callout_value"><span data-financial-item="total_debtMonthly10year">$612.94</span></div>
                 <p>Your payment will depend on your total debt and your repayment plan. (This tool assumes a standard plan, where you pay the same amount every month.)</p>
             </div>
 
             <div class="number-callout number-callout__lined">
-                <h4 class="number-callout_header">Monthly salary</h4>
+                <h4 class="number-callout_header">Median monthly salary</h4>
                 <div class="number-callout_value"><span data-financial-itemX="salary_monthly">$4,016.67</span></div>
                 <p>Your actual monthly salary will depend on many different factors, including your field of work, and the area where you will live. To get more information about the salary levels of different careers, visit the <a href="">BLS Wage Data</a> website.</p>
             </div>
@@ -1429,12 +1410,12 @@
             <div class="m-notification m-notification__visible">
                 {{ svg_icon('information-round') }}
                 <div class="m-notification_content">
-                    Students to to overestimate their startings salaries, and assume it will be higher than average. In your calculations, use a lower starting salary, so that you are prepared in case your actual starting salary is lower than you expected.
+                    Students tend to overestimate their starting salaries. Remember that medians are the middle – half of students make more, but half make less.
                 </div>
             </div>
 
             <div class="number-callout number-callout__lined">
-                <h4 class="number-callout_header">Monthly expenses</h4>
+                <h4 class="number-callout_header">Average monthly expenses</h4>
                 <div class="number-callout_value"><span data-expenses-item="total_expenses">$3,777</span></div>
             </div>
 
@@ -1583,7 +1564,7 @@
         <section class="college-costs_tool-section school-results" data-tool-section="school-results">
             <h2>Compare the school to others</h2>
 
-            <p>Now that you understand how much debt you’re considering, let’s look at some statistics that indicate how well the school serves students. These stats are important because finishing and getting your degree or certificate, especially at a chool that you will finish well-prepared, means you’re more likely to get a higher paying job and be able to afford your debt. You’re investing a lot—make sure it pays off.</p>
+            <p>Now that you understand how much debt you’re considering, let’s look at some statistics that indicate how well the school serves students. You’re investing a lot—make sure it pays off.</p>
 
             <h3 class="header_bottom-line">School basics</h3>
 
@@ -1621,7 +1602,7 @@
             <div class="m-notification m-notification__visible m-notification__warning">
                 {{ svg_icon('information-round') }}
                 <div class="m-notification_content">
-                    This school is under investigation. <a href="">Find out more.</a>
+                    This school is under Heightened Cash Monitoring by the U.S. Department of Education. <a href="">Find out more.</a>
                 </div>
             </div>
 
@@ -1776,7 +1757,7 @@
         </section>
 
         <section class="college-costs_tool-section" data-tool-section="action-plan">
-            <h2>What do I do next?</h2>
+            <h2>What to do next</h2>
 
             <p>Your next steps depend on whether you want to use this plan to pay for attending this school.</p>
 
@@ -1802,7 +1783,7 @@
                 <h3>How to put this plan into action</h3>
                 <h4>1. Ask the financial aid office any questions you still have.</h4>
 
-                <p>It’s first on this list, but you can should do it whenever you’re confused or unsure of what to do next.</p>
+                <p>It’s first on this list, but you should do it whenever you’re confused or unsure of what to do next.</p>
 
                 <h4>2. Find out what it takes to enroll.</h4>
 
@@ -1812,21 +1793,21 @@
 
                 <p>Read or ask about the requirements of each grant and scholarship. </p>
 
-                <h4>4. Double check that you’ll have enough money when you need it.</h4>
-
-                <p>If you have uncovered upfront costs, talk to the financial aid office about options like tuition installment plans. Explore savings options, it is never too late to start. Or explore whether your family is able to contribute.</p> 
-
-                <h4>5. Accept the loans you want.</h4>
-
-                <p>More paperwork! You’ll also need to do entrance counseling online for federal loans. Remember, you don’t need to accept all the loans, ask your financial aid office to reduce your loans amounts if you would like to borrow less. </p>
-
-                <h4>6. Apply for additional institutional or private student loans.</h4>
-
-                <p>To get the best deal for your situation, read the fine print and shop around for the lowest interest rates and fees. You’ll probably need a cosigner.</p>
-
-                <h4>7. Make a budget.</h4>
+                <h4>4. Make a budget.</h4>
 
                 <p>Use this cashflow budget to plan out when you’ll get money and when you’ll have to pay it.</p> 
+
+        <h4>5. Double check that you’ll have enough money when you need it.</h4>
+
+                <p>If you have uncovered direct costs, talk to the financial aid office about options like tuition installment plans. Explore savings options—it is never too late to start. Or explore whether your family is able to contribute.</p> 
+
+                <h4>6. Accept the loans you want.</h4>
+
+                <p>More paperwork! You may need to do entrance counseling online for federal loans. Remember, you’re not required to borrow the full amount offered. Ask your financial aid office how to reduce your loans amounts if you would like to borrow less. </p>
+
+                <h4>7. Apply for additional institutional or private student loans.</h4>
+
+                <p>To get the best deal for your situation, read the fine print and shop around for the lowest interest rates and fees. You’ll probably need a cosigner.</p>
 
                 <h4>8. Put a reminder in your calendar to fill out FAFSA on October 1.</h4>
 
@@ -1858,9 +1839,10 @@
                 <p>Remember, up to 20 hours a week is associated with better grades.</p>
 
                 <h4>5. Think about other programs at this school.</h4>
+         <p> Choose a major that will open the door to more lucrative career fields.</p>
 
                 <h4>6. Explore other schools.</h4>
-                <p>Even if this is the only school you applied to, it’s not your only option. You can always start at community college and plan to apply for a transfer next year.</p>
+                <p>Even if this is the only school you applied to, it’s not your only option. For example, if you are pursuing a bachelor’s degree, you can start at community college this year and plan to apply for a transfer next year.</p>
 
             </div>
 

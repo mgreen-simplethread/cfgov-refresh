@@ -131,10 +131,10 @@ OPTIONAL_APPS = [
         'apps': ('complaint_search', 'rest_framework')
     },
     {'import': 'ccdb5_ui', 'apps': ('ccdb5_ui', )},
-    {
-        'import': 'teachers_digital_platform',
-        'apps': ('teachers_digital_platform', 'mptt', 'haystack')
-    },
+    # {
+    #     'import': 'teachers_digital_platform',
+    #     'apps': ('teachers_digital_platform', 'mptt', 'haystack')
+    # },
 ]
 
 POSTGRES_APPS = []

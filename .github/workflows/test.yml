@@ -36,11 +36,12 @@ jobs:
       - name: Run ${{ matrix.gulp_cmd }}
         run: yarn run gulp ${{ matrix.gulp_cmd }}
 
-      - name: Submit test coverage
+      - name: Store test coverage
         if: matrix.gulp_cmd == 'test:unit --ci --headless'
-        run: bash <(curl -s https://codecov.io/bash) -F frontend -X coveragepy -y codecode.yml
-        env: 
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage-final.json
+          path: ./test/unit_test_coverage/coverage-final.json
 
   backend:
     runs-on: ubuntu-latest
@@ -93,9 +94,48 @@ jobs:
           TEST_DATABASE_URL: postgres://postgres:postgres@localhost/postgres
           CI_CHECK_MIGRATIONS: "./manage.py makemigrations --dry-run --check"
 
-      - name: Submit test coverage
+      - name: Store test coverage
         # Submit coverage from our prefered tox run only
         if: matrix.toxenv == 'unittest-py36-dj111-wag113-slow'
-        run: bash <(curl -s https://codecov.io/bash) -F backend -y codecode.yml
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage.xml
+          path: ./coverage.xml
+
+  coverage:
+    runs-on: ubuntu-latest
+    needs: 
+      - frontend
+      - backend
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Retrieve frontend coverage
+        uses: actions/download-artifact@v1
+        with:
+            name: coverage-final.json
+
+      - name: Retrieve backend coverage
+        uses: actions/download-artifact@v1
+        with:
+            name: coverage.xml
+
+      - name: Submit frontend test coverage
+        uses: codecov/codecov-action@v1
+        with:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            file: ./coverage-final.json
+            flags: frontend 
+            yml: ./codecov.yml
+            fail_ci_if_error: true
+
+      - name: Submit backend test coverage
+        uses: codecov/codecov-action@v1
+        with:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            file: ./coverage.xml
+            flags: backend
+            yml: ./codecov.yml
+            fail_ci_if_error: true

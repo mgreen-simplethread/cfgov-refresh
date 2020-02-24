@@ -207,26 +207,44 @@ class EnforcementActionPage(AbstractFilterPage):
         StreamFieldPanel('content')
     ]
 
+    metadata_panels = [MultiFieldPanel([
+        FieldPanel('sidebar_header'),
+        FieldPanel('court'),
+        FieldPanel('institution_type'),
+        FieldPanel('docket_number'),
+        InlinePanel('statuses', label="Enforcement Status"),
+        FieldPanel('date_filed'),
+        InlinePanel('categories', label="Categories", max_num=2),
+        FieldPanel('tags', 'Tags'),
+    ])]
+
+    settings_panels = [
+        MultiFieldPanel(CFGOVPage.promote_panels, 'Settings'),
+        MultiFieldPanel([
+            FieldPanel('preview_title', classname="full"),
+            FieldPanel('preview_subheading', classname="full"),
+            FieldPanel('preview_description', classname="full"),
+            FieldPanel('secondary_link_url', classname="full"),
+            FieldPanel('secondary_link_text', classname="full"),
+            ImageChooserPanel('preview_image'),
+        ], heading='Page Preview Fields', classname='collapsible'),
+        FieldPanel('authors', 'Authors'),
+        MultiFieldPanel([
+            FieldPanel('date_published'),
+            FieldPanel('comments_close_by'),
+        ], 'Relevant Dates', classname='collapsible'),
+        MultiFieldPanel(Page.settings_panels, 'Scheduled Publishing'),
+        FieldPanel('language', 'Language'),
+    ]
+
     edit_handler = TabbedInterface([
         ObjectList(
             AbstractFilterPage.content_panels + content_panels,
             heading='General Content'
         ),
-        ObjectList([
-            MultiFieldPanel([
-                FieldPanel('sidebar_header'),
-                FieldPanel('court'),
-                FieldPanel('institution_type'),
-                FieldPanel('docket_number'),
-                InlinePanel('statuses', label="Enforcement Status"),
-            ])],
-            heading='Metadata'
-        ),
+        ObjectList(metadata_panels, heading='Metadata'),
         ObjectList(CFGOVPage.sidefoot_panels, heading='Sidebar'),
-        ObjectList(
-            AbstractFilterPage.settings_panels,
-            heading='Configuration'
-        )
+        ObjectList(settings_panels, heading='Configuration')
     ])
 
     template = 'enforcement-action/index.html'

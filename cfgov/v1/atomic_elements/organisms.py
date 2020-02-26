@@ -489,7 +489,7 @@ class RichTextTableInput(WidgetWithScript, forms.HiddenInput):
     def render(self, name, value, attrs=None):
         value = self.json_dict_apply(
             value,
-            partial(expand_db_html, for_editor=True)
+            expand_db_html
         )
 
         html = super(RichTextTableInput, self).render(name, value, attrs)
